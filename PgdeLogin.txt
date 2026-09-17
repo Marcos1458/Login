@@ -1,0 +1,348 @@
+HTML:----------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="esquerda">
+            <div class="card">
+                <div class="topo">
+                    <h3>START FOR FREE</h3>
+                </div>
+                <div class="meio">
+                    <h1>Create a new account.</h1>
+                    <p>Embark on a Journey to a Healthier Lifestyle with Our Fitness and Wellness Community. Sign Up Today!</p>
+                </div>
+                <div class="fim">
+                    <div class="feedback">
+                        <div class="cima">
+                            <p>Signing up for this wellness website was the best decision I made for my health.</p>
+                        </div>
+                        <div class="baixo">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqKPK366eheamhE0Y8l7lX-qx-z-zbrkojKWFDJM-tjydae5n8z3z6pmQY&s=10" alt="James Anderson">
+                            <div class="info">
+                                <h3>James Anderson</h3>
+                                <p>Athlete</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="direita">
+            <div class="topo">
+                <h3>Get start</h3>
+                <p>Already a member? <a href="#">Log in</a></p>
+            </div>
+            <form class="meio">
+                <div class="input-group">
+                    <div class="inputs-row">
+                        <div class="field">
+                            <label for="f-name">First name</label>
+                            <input type="text" id="f-name">
+                        </div>
+                        <div class="field">
+                            <label for="l-name">Last name</label>
+                            <input type="text" id="l-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="section-label">Gender</label>
+                    <div class="inputs-row">
+                        <label class="genero-option selected">
+                            <input type="radio" name="genero" value="male" checked>
+                            <span>Male</span>
+                        </label>
+                        <label class="genero-option">
+                            <input type="radio" name="genero" value="female">
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="examplemail@gmail.com">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="•••••••••">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+CSS:-----------------------------------------------------------------------------------------------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #E2DAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1000px;
+    height: 620px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+/* Painel Esquerdo */
+.container .esquerda {
+    width: 42%;
+    height: 100%;
+}
+
+.container .esquerda .card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #7C42FF 0%, #5B18FF 100%);
+    border-radius: 16px;
+    color: white;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .esquerda .card .topo h3 {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.container .esquerda .card .meio h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.container .esquerda .card .meio p {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+.container .esquerda .card .fim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .esquerda .card .fim .feedback {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 18px;
+    backdrop-filter: blur(5px);
+}
+
+.container .esquerda .card .fim .feedback .cima p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.container .esquerda .card .fim .feedback .baixo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.container .esquerda .card .fim .feedback .baixo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.container .esquerda .card .fim .feedback .baixo .info h3 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.container .esquerda .card .fim .feedback .baixo .info p {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+
+/* Painel Direito */
+.container .direita {
+    width: 58%;
+    height: 100%;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .direita .topo {
+    margin-bottom: 25px;
+}
+
+.container .direita .topo h3 {
+    font-size: 24px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+.container .direita .topo p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.container .direita .topo a {
+    color: #5B18FF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container .direita .meio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.inputs-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+}
+
+label, .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8C8C8C;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid #E2E2E2;
+    padding: 0 14px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #5B18FF;
+}
+
+/* Seleção de Gênero */
+.genero-option {
+    flex: 1;
+    height: 42px;
+    border: 1px solid #E2E2E2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.genero-option.selected {
+    border-color: #5B18FF;
+    background-color: #F5F0FF;
+}
+
+.genero-option input[type="radio"] {
+    accent-color: #5B18FF;
+    width: 16px;
+    height: 16px;
+}
+
+/* Botão de Envio */
+.btn-submit {
+    margin-top: 10px;
+    width: 100%;
+    height: 44px;
+    background-color: #4C11F5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #3B0BD1;
+}
